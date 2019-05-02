@@ -33,7 +33,7 @@
 				$cep.on('blur change keyup', function() {
 					var val = $cep.val();
 					// Remove caracteres que o usuario normalmente digita no cep como - e .
-					val = val.replace(/\-|\./g, "");
+					val = val.replace(/[^\d]/g, "");
 					if (val && currentCep !== val && val.length === 8) {
 						currentCep = val;
 						self.sendRequest();
