@@ -39,6 +39,7 @@
 						self.sendRequest();
 					}
 				});
+        self.sendRequest();
 			},
 			getData: function(data){
 				// sistema fallback para selecionar os campos
